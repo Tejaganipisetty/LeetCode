@@ -6,13 +6,12 @@ public:
         {
             um[n]++;
         }
-        unordered_set<int> us1(arr.begin(),arr.end());
-        unordered_set<int> us2;
+        unordered_set<int> us;
         for(auto it:um)
         {
-            us2.insert(it.second);
+            us.insert(it.second);
         }
-        if(us2.size()==us1.size()) return true;
+        if(um.size()==us.size()) return true;
         return false;
     }
 };
