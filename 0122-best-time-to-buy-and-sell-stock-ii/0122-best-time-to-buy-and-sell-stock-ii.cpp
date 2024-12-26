@@ -1,7 +1,7 @@
 class Solution {
 public:
     int fun(int ind,int buy,vector<int>&prices,vector<vector<int>>&dp){
-        if(ind==prices.size()) return 0;
+        if(ind>=prices.size()) return 0;
         int profit;
         if(dp[ind][buy]!=-1) return dp[ind][buy];
         if(buy) profit=max((-prices[ind]+fun(ind+1,0,prices,dp)),(fun(ind+1,1,prices,dp)));
